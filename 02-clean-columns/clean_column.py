@@ -12,6 +12,12 @@ Output: cleaned_output.xlsx
 
 import pandas as pd
 from pathlib import Path
+import os
+
+# Get current working directory (where Python is running from)
+cwd = Path(os.getcwd())
+
+
 
 def clean_column_names(df: pd.DataFrame) -> pd.DataFrame:
     """Standardize column names: lowercase, trimmed, and underscores."""
@@ -33,7 +39,13 @@ def remove_duplicates(df: pd.DataFrame) -> pd.DataFrame:
     return df.drop_duplicates()
 
 def main():
-    input_path = Path("../01-read-inspect/sample_input.xlsx")
+
+    # Build the path to the Excel file relative to cwd
+    input_path = cwd / "01-read-inspect" / "sample_input.xlsx"
+
+    print(f"Loading Excel file from: {input_path}")
+
+    # input_path = Path("../01-read-inspect/sample_input.xlsx")
     output_path = Path("cleaned_output.xlsx")
 
     print(f"🔹 Loading: {input_path}")
