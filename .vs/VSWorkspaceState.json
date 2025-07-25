@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\02-clean-columns"
+    "\\02-clean-columns",
+    "\\04-analyze-visualize"
   ],
-  "SelectedNode": "\\02-clean-columns\\clean_column.py",
+  "SelectedNode": "\\04-analyze-visualize\\analyze_data.py",
   "PreviewInSolutionExplorer": false
 }
